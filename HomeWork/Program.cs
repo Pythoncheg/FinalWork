@@ -50,7 +50,7 @@ void FinalSort(string[] array1, string[] array2)
 Console.Clear();
 Console.Write("Введите массив строк через запятую: ");
 string m = Console.ReadLine();
-string[] sourceArray = m.Split(',');
+string[] sourceArray = m.Split(',', StringSplitOptions.RemoveEmptyEntries);
 string[] resultArray = new string[FindLength(sourceArray)];
 Console.WriteLine();
 Console.Write($"Заданный массив: ");
