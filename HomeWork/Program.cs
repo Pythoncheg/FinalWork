@@ -30,6 +30,7 @@ int FindLength(string[] array)
     {
         if(array[i].Length <= 3) count++;
     }
+    if(count == 0) count++;
     return count;
 }
 
@@ -47,9 +48,9 @@ void FinalSort(string[] array1, string[] array2)
 }
 
 Console.Clear();
-Console.Write("Введите массив строк: ");
+Console.Write("Введите массив строк через запятую: ");
 string m = Console.ReadLine();
-string[] sourceArray = m.Split(' ', ',');
+string[] sourceArray = m.Split(',');
 string[] resultArray = new string[FindLength(sourceArray)];
 Console.WriteLine();
 Console.Write($"Заданный массив: ");
