@@ -45,3 +45,17 @@ void FinalSort(string[] array1, string[] array2)
         }
     }
 }
+
+Console.Clear();
+Console.Write("Введите массив строк: ");
+string m = Console.ReadLine();
+string[] sourceArray = m.Split(' ', ',');
+string[] resultArray = new string[FindLength(sourceArray)];
+Console.WriteLine();
+Console.Write($"Заданный массив: ");
+PrintArray(sourceArray);
+Console.WriteLine();
+FinalSort(sourceArray, resultArray);
+Console.Write("Полученный массив: ");
+PrintArray(resultArray);
+Console.WriteLine();
